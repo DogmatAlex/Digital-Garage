@@ -1,0 +1,23 @@
+<div class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <h2>Вход</h2>
+    <div class="login-form__input">
+        <label for="username">Username</label>
+        <input type="text" id="username" formControlName="username" />
+        @if (!loginForm.controls.username.valid && loginForm.controls.username.touched) {
+        <small>* Это поле обязательно для заполнения</small>
+        }
+    </div>
+
+
+    <div class="login-form__input">
+        <label for="password">Password</label>
+        <input #passwordInput type="password" id="password" formControlName="password" />
+        <img class="eye" src="/assets/img/eye.png" (click)="passwordVisibility($event)">
+    </div>
+
+    <button type="submit" (click)="onSubmit()" [disabled]="!loginForm.valid">
+        {{ isLoggedIn ? 'Выйти' : 'Войти'}}
+    </button>
+
+
+</div>

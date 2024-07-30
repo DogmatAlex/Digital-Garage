@@ -1,0 +1,11 @@
+.App {
+    background-image: url(../assets/img/garage.jpg);
+    box-shadow: 0px 10px 20px #070707;
+    border-radius: 20px;
+    max-width: 1080px;
+    height: 100vh;
+    overflow: auto; /* Позволяет прокручивать содержимое, если оно превышает высоту */
+    margin: 30px auto;
+    padding-bottom: 100px;
+
+  }

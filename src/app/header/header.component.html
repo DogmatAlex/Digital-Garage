@@ -1,0 +1,25 @@
+<header>
+    <div class="headerLeft">
+        <a [routerLink]="['/garage']" routerLinkActive="active">
+            <img src="../assets/img/logo.png" alt="logo">
+            <div class="headerLeft__info">
+                <h3>Digital Garage</h3>
+                <p>Дневник автомобилиста</p>
+            </div>
+        </a>
+    </div>
+
+    <ul class="headerRight">
+        <li class="headerRight__contacts">
+            <a [routerLink]="['/contacts']" routerLinkActive="active">
+                <img style="height: 45px; width: 45px;" src="../assets/img/contacts.png" alt="contacts">
+            </a>
+        </li>
+
+        <li class="headerRight__login">
+            <a [routerLink]="['/login']" routerLinkActive="active">
+                <img style="height: 45px; width: 45px;" src="../assets/img/login.png" alt="login">
+            </a>
+        </li>
+    </ul>
+</header>

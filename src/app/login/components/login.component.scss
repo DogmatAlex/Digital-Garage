@@ -1,0 +1,86 @@
+.login-form {
+    display: flex;
+    flex-direction: column;
+    background-color: #191919bb;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    margin: 50px auto;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 25px;
+
+    & h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    &__input {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 60%;
+        height: 30px;
+        margin-bottom: 20px;
+        position: relative;
+
+        & label {
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+        }
+
+        & input {
+            font-size: 16px;
+            padding: 8px;
+            background-color: rgba(255, 255, 255, 0.947);
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        & small {
+            color: red;
+            font-size: 12px;
+        }
+
+        & .eye {
+            height: 22px;
+            width: 22px;
+            position: absolute;
+            margin-top: 8px;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    }
+
+    & button {
+        width: 60%;
+        height: 35px;
+        background-color: rgb(49, 81, 87);
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background 0.2s ease-in-out;
+
+        &:hover {
+            background: lighten($color: rgb(49, 81, 87), $amount: 8%);
+          }
+          &:active {
+            background: darken($color: rgb(49, 81, 87), $amount: 11%);
+          }
+    }
+
+
+    @media (max-width: 768px) {
+        width: 70%;
+    }
+
+    @media (max-width: 480px) {
+        width: 90%;
+    }
+}
