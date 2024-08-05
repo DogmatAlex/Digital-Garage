@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginModule } from './login/login.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ContactsComponent } from './contacts/components/contacts.component';
+import { GarageComponent } from './garage/components/garage.component';
 
 @NgModule({
   declarations: [
