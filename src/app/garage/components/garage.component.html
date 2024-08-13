@@ -1,1 +1,24 @@
-<p>garage works!</p>
+<div class="garage">
+    <h1>Гараж</h1>
+
+    <button class="btn-addForm" type="button" (click)="showForm = !showForm">
+        <img src="../assets/img/add.png" alt="Добавить машину">
+    </button>
+
+    <div class="carForm" *ngIf="showForm">
+        <form class="carForm__content">
+            <label for="brand">Марка:</label>
+            <input type="text" id="brand" [(ngModel)]="newCar.brand" name="brand">
+
+            <label for="model">Модель:</label>
+            <input type="text" id="model" [(ngModel)]="newCar.model" name="model">
+
+            <label for="year">Год выпуска:</label>
+            <input type="number" id="year" [(ngModel)]="newCar.year" name="year">
+        </form>
+        <div class="carForm__buttons">
+            <button type="button" (click)="addCar()">Добавить автомобиль</button>
+            <button type="button" (click)="toggleForm()">Отмена</button>
+        </div>
+    </div>
+</div>
